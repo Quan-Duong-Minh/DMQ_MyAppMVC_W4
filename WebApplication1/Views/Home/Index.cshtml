@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="border border-primary p-3 rounded">
+    <h5 class="bg-primary text-white p-2">Sản phẩm mới nhất</h5>
+    <div class="row">
+        @for (int i = 0; i < 3; i++)
+        {
+            <div class="col-md-4 text-center">
+                <div class="card p-2">
+                    <img src="~/images/noicom.jpg" class="card-img-top" alt="Nồi cơm điện">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Nồi cơm điện cao tần Nagakawa NAG0102</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@await Component.InvokeAsync("HotProduct")
